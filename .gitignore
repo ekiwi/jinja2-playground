@@ -1,0 +1,8 @@
+# SCons files
+.sconsign.dblite
+
+# Gedit backups
+*~
+
+# Generated Files
+generated/

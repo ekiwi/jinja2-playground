@@ -6,3 +6,6 @@
 
 # Generated Files
 generated/
+
+# Python
+*.pyc

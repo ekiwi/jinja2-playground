@@ -1,14 +1,13 @@
 
 
-
 int main() {
-{{a}}
-
+std::cout << "The number contained in a is {{a}}" << std::endl;
 {% if 42 is prime -%}
-42 is a prime number
+std::cout << "42 is a prime number" << std::endl;
 {% else -%}
-42 is not a prime number
+	 
+	 
+std::cout << "42 is not a prime number" << std::endl;
 {% endif -%}
-
 }
 

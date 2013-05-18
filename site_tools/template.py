@@ -89,6 +89,7 @@ def jinja2_template_action(target, source, env):
 	loader.filters['xpcc.wordwrap'] = filter_wordwrap
 	loader.filters['xpcc.indent'] = filter_indent
 	loader.tests['prime'] = test_is_prime
+	# loader.trim_blocks = True
 
 	template = loader.get_template(filename, globals=globals)
 	

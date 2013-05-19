@@ -2,21 +2,21 @@
 
 int main() {
 std::cout << "The number contained in a is {{a}}" << std::endl;
-{% if 42 is prime
+{% if 42 is prime -%}
 std::cout << "42 is a prime number" << std::endl;
-{% else
+{% else -%}
 std::cout << "42 is not a prime number" << std::endl;
-{% endif
+{% endif -%}
 
 
-{% for gpio in gpios
-	{% set register = "GPIO" ~ gpio.port|upper
-	{% set name = "Gpio" ~ gpio.port|upper ~ gpio.pin
+{% for gpio in gpios -%}
+	{% set register = "GPIO" ~ gpio.port|upper -%}
+	{% set name = "Gpio" ~ gpio.port|upper ~ gpio.pin -%}
 	std::cout << "Gpio Register: {{register}}" << std::endl;
 	std::cout << "Struct name: {{name}}" << std::endl;
-	{% for id, connect in gpio.af.iteritems()
+	{% for id, connect in gpio.af.iteritems() -%}
 	std::cout << "AF_{{id}} connects to xpcc::stm32::{{connect}}" << std::endl;
-	{% endfor
-{% endfor
+	{% endfor -%}
+{% endfor -%}
 }
 

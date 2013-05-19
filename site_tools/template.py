@@ -90,8 +90,8 @@ def jinja2_template_action(target, source, env):
 	loader.filters['xpcc.indent'] = filter_indent
 	loader.tests['prime'] = test_is_prime
 	# loader.trim_blocks = True
-	loader.line_statement_prefix = '{%'
-	loader.line_comment_prefix = '{#'
+	# loader.line_statement_prefix = '{%'
+	# loader.line_comment_prefix = '{#'
 
 	template = loader.get_template(filename, globals=globals)
 	

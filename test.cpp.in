@@ -9,14 +9,14 @@ std::cout << "42 is not a prime number" << std::endl;
 {% endif -%}
 
 
-{% for gpio in gpios -%}
-	{% set register = "GPIO" ~ gpio.port|upper -%}
-	{% set name = "Gpio" ~ gpio.port|upper ~ gpio.pin -%}
+{%% for gpio in gpios
+	{%% set register = "GPIO" ~ gpio.port|upper
+	{%% set name = "Gpio" ~ gpio.port|upper ~ gpio.pin
 	std::cout << "Gpio Register: {{register}}" << std::endl;
 	std::cout << "Struct name: {{name}}" << std::endl;
-	{% for id, connect in gpio.af.iteritems() -%}
+	{%% for id, connect in gpio.af.iteritems()
 	std::cout << "AF_{{id}} connects to xpcc::stm32::{{connect}}" << std::endl;
-	{% endfor -%}
-{% endfor -%}
+	{%%- endfor
+{%% endfor
 }
 
